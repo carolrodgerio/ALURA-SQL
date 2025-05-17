@@ -1,0 +1,21 @@
+TEXTO (STRING)
+- char: armazena strings de tamanho fixo, quando os valores têm um comprimento constante
+- varchar: armazena strings de tamanho variável
+- text: armazena strings longas, como documentos ou descrições
+
+NUMÉRICO
+- integer (int): armazena números inteiros
+- float: armazena números de ponto flutuante, usados para valores com casas decimais
+- numeric (decimal): armazena números com uma precisão específica
+
+DATA E HORA
+- date: armazena datas sem informações de horário
+- time: armazena informações de horário
+- timestamp: combina data e horário em um único tipo
+
+BOOLEANO
+- boolean (bool): armazena valores verdadeiros ou falsos
+
+BINÁRIO
+- blob (Binary Large Object): armazena dados binários, como imagens, vídeos ou arquivos
+- bit: armazena valores binários, como 0 ou 1
