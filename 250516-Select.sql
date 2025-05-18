@@ -13,6 +13,9 @@ SELECT * FROM tabela WHERE coluna_string LIKE 'B'; -- filtrará as colunas que s
 SELECT * FROM tabela WHERE coluna_string LIKE 'B%'; -- filtrará as colunas que começam com a letra B
 SELECT * FROM tabela WHERE coluna_data > '2025-05-17';
 SELECT * FROM tabela WHERE coluna IN (1, 2, 3);
+SELECT * FROM tabela WHERE coluna NOT IN (1, 2, 3);
+SELECT * FROM tabela WHERE coluna IS NULL; -- variação: SELECT * FROM tabela WHERE coluna ISNULL
+SELECT * FROM tabela WHERE coluna IS NOT NULL; -- variação: SELECT * FROM tabela WHERE coluna NOTNULL
 
 -- SELECT COMPOSTO
 
@@ -32,6 +35,11 @@ SELECT coluna AS col, coluna_num AS num FROM tabela;
 SELECT A.id AS id_1, B.id AS id_2
 FROM coluna1 AS A
 JOIN coluna2 AS B ON A.id = B.id;
+
+-- SELECT DE LINHAS LIMITADAS
+
+SELECT * FROM tabela LIMIT 5; -- retornará apenas as 5 primeiras linhas
+SELECT * FROM tabela LIMIT 5 OFFSET 5; -- pulará os 5 primeiros registros e retornará os 5 registros subsequentes
 
 -- SELECT DESPREZANDO DADOS DUPLICADOS (DISTINCT)
 
