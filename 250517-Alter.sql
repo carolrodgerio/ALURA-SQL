@@ -1,6 +1,6 @@
 -- criação de coluna
 
-ALTER TABLE tabela ADD coluna VARCHAR(250);
+ALTER TABLE tabela ADD COLUMN coluna VARCHAR(250);
 
 -- exclusão de coluna
 
