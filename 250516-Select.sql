@@ -17,6 +17,15 @@ SELECT * FROM tabela WHERE coluna_data > '2025-05-17';
 SELECT * FROM tabela WHERE coluna = 'X' AND coluna_num <> 1;
 SELECT * FROM tabela WHERE coluna_num < 30 OR coluna_string > 'E';
 
+-- SELECT ORDENADO
+
+SELECT * FROM tabela WHERE coluna = 'X' ORDER BY coluna2;
+SELECT * FROM tabela WHERE coluna = 'X' ORDER BY coluna2 DESC;
+
+-- SELECT COM APELIDO (ALIAS)
+
+SELECT coluna AS col FROM tabela;
+
 -- SELECT DESPREZANDO DADOS DUPLICADOS (DISTINCT)
 
 SELECT DISTINCT coluna FROM tabela;
