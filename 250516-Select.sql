@@ -9,8 +9,10 @@ SELECT * FROM tabela WHERE NOT coluna = 'X';
 SELECT * FROM tabela WHERE coluna_num <> 1; -- <> significa diferente, também pode ser utilizado !=
 SELECT * FROM tabela WHERE coluna_num BETWEEN '1' AND '5';
 SELECT * FROM tabela WHERE coluna_string > 'C'; -- filtrará as colunas que começam com a letra C em diante
-SELECT * FROM tabela WHERE coluna_string LIKE 'B'; -- filtrará as colunas que contenham a string "B"
+SELECT * FROM tabela WHERE coluna_string LIKE 'B'; -- filtrará as colunas que sejam iguais a string "B"
+SELECT * FROM tabela WHERE coluna_string LIKE 'B%'; -- filtrará as colunas que começam com a letra B
 SELECT * FROM tabela WHERE coluna_data > '2025-05-17';
+SELECT * FROM tabela WHERE coluna IN (1, 2, 3);
 
 -- SELECT COMPOSTO
 
