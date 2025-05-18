@@ -25,6 +25,7 @@ SELECT * FROM tabela WHERE coluna = 'X' ORDER BY coluna2 DESC;
 -- SELECT COM APELIDO (ALIAS)
 
 SELECT coluna AS col FROM tabela;
+SELECT coluna AS col, coluna_num AS num FROM tabela;
 
 SELECT A.id AS id_1, B.id AS id_2
 FROM coluna1 AS A
