@@ -44,3 +44,81 @@ SELECT * FROM tabela LIMIT 5 OFFSET 5; -- pulará os 5 primeiros registros e ret
 -- SELECT DESPREZANDO DADOS DUPLICADOS (DISTINCT)
 
 SELECT DISTINCT coluna FROM tabela;
+
+
+-- // -- // -- // -- // -- // FUNÇÕES DE AGREGAÇÃO // -- // -- // -- // -- // --
+
+-- MAX (valor máximo)
+
+SELECT coluna, MAX(coluna_ref) FROM tabela;
+
+-- MIN (valor mínimo)
+
+SELECT coluna, MIN(coluna_ref) FROM tabela;
+
+-- SUM (soma)
+
+SELECT SUM(coluna) FROM tabela;
+
+-- AVG (média)
+
+SELECT AVG(coluna) FROM tabela;
+
+-- COUNT (contagem)
+
+SELECT COUNT(*) FROM tabela;
+
+SELECT COUNT(*) AS alias FROM tabela GROUP BY coluna HAVING alias > 2; -- exemplo de contagem com apelido
+
+-- GROUP BY (agrupamento)
+
+SELECT coluna FROM tabela GROUP BY coluna_ref;
+
+-- HAVING (cria uma condição, assim como WHERE - WHERE só cria condição para registros únicos, logo, não funciona para valores agregados)
+
+SELECT coluna FROM tabela GROUP BY coluna_ref HAVING COUNT(coluna) > 2;
+
+
+-- // -- // -- // -- // -- // FUNÇÕES DE STRINGS // -- // -- // -- // -- // --
+
+-- LENGTH
+
+SELECT LENGTH(coluna) FROM tabela;
+
+-- CONCAT
+
+SELECT ('texto' || coluna) FROM tabela;
+
+-- OUTRAS FUNÇÕES
+
+SELECT UPPER('texto' || coluna) FROM tabela; -- deixa todos os caracteres em maiúsculo
+
+SELECT LOWER('texto' || coluna) FROM tabela; -- deixa todos os caracteres em minúsculo
+
+SELECT TRIM(coluna, 'caractere') FROM tabela; -- remove espaços (ou outro conjunto especificado de caracteres) do início e do fim de uma string
+
+SELECT INSTR(coluna, 'substring') FROM tabela; -- retorna a posição de uma substring dentro de uma string
+
+SELECT REPLACE(coluna, 'string_anterior', 'nova_string') FROM tabela; -- substitui todas as ocorrências de uma substring específica por outra substring dentro de uma string
+
+SELECT SUBSTR(coluna, 1, 5) FROM tabela; -- extrai uma parte de uma string com base em um ponto de início e um comprimento especificados
+
+
+-- // -- // -- // -- // -- // FUNÇÕES DE DATA // -- // -- // -- // -- // --
+
+SELECT STRFTIME('%Y/%M', coluna_data) FROM tabela; -- altera a formatação da data
+
+SELECT JULIANDAY(coluna_fim) - JULIANDAY(coluna_inicio) FROM tabela; -- retorna a diferença de dias entre duas colunas de data
+
+SELECT DATE('now'); -- retorna a data atual
+
+SELECT DATE('now', '-10 days'); -- pode ser adicionado um modificador
+
+SELECT TIME('now'); -- retorna o horário atual
+
+SELECT DATETIME('now'); -- equivalente a SELECT CURRENT_TIMESTAMP, ambos retornam a data e hora atuais
+
+
+-- // -- // -- // -- // -- // ORDEM DAS CLÁUSULAS // -- // -- // -- // -- // --
+
+-- SELECT -> FROM -> WHERE -> GROUP BY -> HAVING -> ORDER BY
