@@ -26,6 +26,10 @@ SELECT * FROM tabela WHERE coluna = 'X' ORDER BY coluna2 DESC;
 
 SELECT coluna AS col FROM tabela;
 
+SELECT A.id AS id_1, B.id AS id_2
+FROM coluna1 AS A
+JOIN coluna2 AS B ON A.id = B.id;
+
 -- SELECT DESPREZANDO DADOS DUPLICADOS (DISTINCT)
 
 SELECT DISTINCT coluna FROM tabela;
