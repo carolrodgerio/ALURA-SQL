@@ -119,6 +119,15 @@ SELECT TIME('now'); -- retorna o horário atual
 SELECT DATETIME('now'); -- equivalente a SELECT CURRENT_TIMESTAMP, ambos retornam a data e hora atuais
 
 
+-- // -- // -- // -- // -- // FUNÇÕES NUMÉRICAS // -- // -- // -- // -- // --
+
+SELECT AVG(coluna), ROUND(AVG(coluna), 2) FROM tabela; -- arredonda o resultado em 2 casas decimais
+
+SELECT CEIL(coluna) FROM tabela; -- arredonda o resultado para o maior inteiro
+
+SELECT FLOOR(coluna) FROM tabela; -- arredonda o resultado para o menor
+
+
 -- // -- // -- // -- // -- // ORDEM DAS CLÁUSULAS // -- // -- // -- // -- // --
 
 -- SELECT -> FROM -> WHERE -> GROUP BY -> HAVING -> ORDER BY
