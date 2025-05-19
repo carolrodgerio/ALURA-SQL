@@ -35,6 +35,20 @@ CREATE TABLE tabela (
   string VARCHAR(250) DEFAULT 'Sem texto'
 );
 
+-- CREATE TABLE COM TRIGGER
+
+CREATE TABLE tabela (
+  inteiro INT PRIMARY KEY,
+  string VARCHAR(250)
+  );
+
+CREATE TRIGGER gatilho
+AFTER INSERT ON tabela_ref
+FOR EACH ROW
+BEGIN
+  -- comandos
+END;
+
 -- CREATE VIEW (tabela de visualização que armazena consultas)
 
 CREATE VIEW view_tabela AS
