@@ -28,6 +28,17 @@ CREATE TABLE tabela (
   FOREIGN KEY (data) REFERENCES tabela2 (primary_key_tabela2) ON DELETE CASCADE
 );
 
+-- CREATE TABLE COM DELETE RESTRICT (não é possível deletar tabelas com essa restrição)
+
+CREATE TABLE tabela (
+  inteiro INT PRIMARY KEY,
+  string VARCHAR(250),
+  texto TEXT,
+  num_decimal DECIMAL(10,2),
+  data DATE,
+  FOREIGN KEY (data) REFERENCES tabela2 (primary_key_tabela2) ON DELETE RESTRICT
+);
+
 -- CREATE TABLE COM DEFAULT (será definido um valor padrão quando um campo for nulo)
 
 CREATE TABLE tabela (
