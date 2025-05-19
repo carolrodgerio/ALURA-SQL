@@ -26,6 +26,7 @@ SELECT * FROM tabela WHERE coluna_num < 30 OR coluna_string > 'E';
 
 SELECT * FROM tabela WHERE coluna = 'X' ORDER BY coluna2;
 SELECT * FROM tabela WHERE coluna = 'X' ORDER BY coluna2 DESC;
+SELECT * FROM tabela WHERE coluna = 'X' ORDER BY coluna2 DESC, coluna3 ASC; -- ordenação combinada
 
 -- SELECT COM APELIDO (ALIAS)
 
