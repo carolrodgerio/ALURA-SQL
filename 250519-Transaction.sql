@@ -1,4 +1,4 @@
-BEGIN TRANSACTION
+BEGIN TRANSACTION -- pode ser utilizado apenas "BEGIN"
 -- comando
 ROLLBACK;
 
