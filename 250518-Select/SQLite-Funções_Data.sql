@@ -1,4 +1,4 @@
-SELECT STRFTIME('%Y/%M', coluna_data) FROM tabela; -- altera a formatação da data
+SELECT STRFTIME('%Y/%m', coluna_data) FROM tabela; -- altera a formatação da data
 
 /*
 %Y: ano com 4 dígitos
