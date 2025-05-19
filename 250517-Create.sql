@@ -34,3 +34,8 @@ CREATE TABLE tabela (
   inteiro INT PRIMARY KEY,
   string VARCHAR(250) DEFAULT 'Sem texto'
 );
+
+-- CREATE VIEW (tabela de visualização que armazena consultas)
+
+CREATE VIEW view_tabela AS
+SELECT * from tabela;
