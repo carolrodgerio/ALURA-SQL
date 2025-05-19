@@ -27,3 +27,10 @@ CREATE TABLE tabela (
   data DATE,
   FOREIGN KEY (data) REFERENCES tabela2 (primary_key_tabela2) ON DELETE CASCADE
 );
+
+-- CREATE TABLE COM DEFAULT (será definido um valor padrão quando um campo for nulo)
+
+CREATE TABLE tabela (
+  inteiro INT PRIMARY KEY,
+  string VARCHAR(250) DEFAULT 'Sem texto'
+);
